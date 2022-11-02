@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,14 +29,14 @@
                 </button>
                 <a class="navbar-brand" href="/">
                     <img class="pull-left" src="assets/img/cookie_funny_clipart.png" alt="The Cookies Factory logo">
-                    <h1>The Cookies Factory</h1>
+                    <h1>The Cookie Factory</h1>
                 </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Chocolates chips</a></li>
+                    <li><a href="#">Chocolate chips</a></li>
                     <li><a href="#">Nuts</a></li>
                     <li><a href="#">Gluten full</a></li>
                     <li>

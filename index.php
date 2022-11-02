@@ -1,8 +1,21 @@
-<?php require 'inc/data/products.php'; ?>
 <?php require 'inc/head.php'; ?>
+<?php require 'inc/data/products.php'; ?>
+
+<?php
+
+if (isset($_GET['add_to_cart'])) {
+    if (isset($_SESSION['name'])) {
+        $_SESSION['product_id'][] = $_GET['add_to_cart'];
+    }
+}
+
+var_dump($_SESSION['product_id']);
+
+?>
+
 <section class="cookies container-fluid">
     <div class="row">
-        <?php foreach ($catalog as $id => $cookie) { ?>
+        <?php foreach ($catalog as $id => $cookie): ?>
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                 <figure class="thumbnail text-center">
                     <img src="assets/img/product-<?= $id; ?>.jpg" alt="<?= $cookie['name']; ?>" class="img-responsive">
@@ -15,7 +28,8 @@
                     </figcaption>
                 </figure>
             </div>
-        <?php } ?>
+        <?php endforeach; ?>
     </div>
 </section>
+
 <?php require 'inc/foot.php'; ?>

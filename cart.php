@@ -1,7 +1,14 @@
-<?php require 'inc/head.php'; ?>
+<?php require 'inc/data/products.php';
+session_start()
+?>
+
 <section class="cookies container-fluid">
     <div class="row">
-        TODO : Display shopping cart items from $_SESSION here.
+        <?php
+        foreach ($_SESSION['product_id'] as $product) {
+            echo $catalog[$product]['name']."<br>";
+        }
+        ?>
     </div>
 </section>
-<?php require 'inc/foot.php'; ?>
+
